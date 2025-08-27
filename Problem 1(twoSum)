@@ -1,12 +1,12 @@
 class Solution:
     def twoSum(self,nums,target):
-        numIndex = {}
+        numIndex = {} # hash map {key : index, key:index}
         for i, num in enumerate(nums):
             complement = target - num
             if complement in numIndex:
-                return [numIndex[complement], i]
-            numIndex[num] = i
-        return []
+                return [numIndex[complement], i]  # tìm thấy tm đk
+            numIndex[num] = i # thêm vào hashmap
+        return [] #k có kq mong muốn, in ra [], tức : rỗng
 
 nums = [3, 3]
 target = 6
